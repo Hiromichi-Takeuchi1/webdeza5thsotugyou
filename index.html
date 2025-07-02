@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+
+    <!-- Reset CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Reset CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p6O6...YOUR-INTEGRITY-HERE...Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- main,to-top.js を読み込む -->
+    <script src="JS/main.js"></script>
+    <script src="JS/to-top.js"></script>
+    <script src="JS/modal.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- モーダル -->
+    <div class="modal">
+        <!-- <div class="modal-overlay"> -->
+            <div class="modal-container">
+                <i class="fa-solid fa-xmark close"></i>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item"><a href="#works" class="nav-menu__link">WORKS</a></li>
+                        <li class="nav-menu__item"><a href="#profile" class="nav-menu__link">PROFILE</a></li>
+                        <li class="nav-menu__item"><a href="#news" class="nav-menu__link">NEWS</a></li>
+                        <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">CONTACT</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        <!-- </div> -->
+    </div>
+
+
+    <header class="header">
+        <h1><img src="img/headerlogo.gif" alt="Logo" class="header__logo"></h1>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a href="#works" class="header__link">WORKS</a></li>
+                <li class="header__item"><a href="#profile" class="header__link">PROFILE</a></li>
+                <li class="header__item"><a href="#news" class="header__link">NEWS</a></li>
+                <li class="header__item"><a href="#contact" class="header__link">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="ham" aria-label="メニューを開く">
+            <span class="ham-icon">
+                <span class="ham__border"></span>
+                <span class="ham__border"></span>
+                <span class="ham__border"></span>
+            </span>
+        </div>
+    </header>
+
+    <div class="hero">
+        <video class="hero__video" src="img/heroeria.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+
+    <section id="works" class="works-section">
+        <div class="works-container">
+            <div class="section-head">
+                <h2>WORKS</h2>
+            </div>
+
+            <div class="works-items">
+                <a href="https://hiromichi-takeuchi1.github.io/setouchiv3/" target="_blank" rel="noopener noreferrer">
+                    <div class="works-card">
+                        <img src="img/Setouchi.png" alt="Setouchi" />
+                        <h3>コンサートの案内サイト</h3>
+                        <p>瀬戸内フェスティバルマンドリン<br>オーケストラ富山講演</p>
+                    </div>
+                </a>
+
+                <a href="https://hiromichi-takeuchi1.github.io/woodenstudio25_5th/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="works-card">
+                        <img src="img/WOODENSTUDIO.png" alt="WOODENSTUDIO" />
+                        <h3>WOODENSTUDIO</h3>
+                        <p>架空の家具屋さんのサイト</p>
+                    </div>
+                </a>
+
+                <a href="https://hiromichi-takeuchi1.github.io/Sand-galleryht/" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="works-card">
+                        <img src="img/Sand-gallery.png" alt="Sand-gallery" />
+                        <h3>Sand-gallery</h3>
+                        <p>架空の美術館のサイト</p>
+                    </div>
+                </a>
+
+                <a href="https://20231021nouyakuapuri.glide.page/dl/d0a5f4" target="_blank" rel="noopener noreferrer">
+                    <div class="works-card">
+                        <img src="img/noyakuapri.png" alt="農薬検索アプリ" />
+                        <h3>農薬検索アプリ</h3>
+                        <p>GLIDEで作った検索アプリ</p>
+                    </div>
+                </a>
+
+                <a href="https://prototype-1-5hvx.onrender.com/login" target="_blank" rel="noopener noreferrer">
+                    <div class="works-card">
+                        <img src="img/dokoren.png" alt="どこれん" />
+                        <h3>どこれん</h3>
+                        <p>練習場所検索アプリ</p>
+                    </div>
+                </a>
+
+                <a href="https://photos.app.goo.gl/WdF7BfYutPqg3BMB6" tabindex="_blank" rel="noopener noreferrer">
+                    <div class="works-card">
+                        <img src="img/webbanner.png" alt="WEBバナー" />
+                        <h3>WEBバナー</h3>
+                        <p>架空のジムのバナー</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSセクションのすぐ下に追加 -->
+    <section id="profile" class="profile-section">
+        <div class="section-head">
+            <h2>PROFILE</h2>
+        </div>
+
+        <div class="section-inner">
+            <h3>名前　武内 宏道</h3>
+            <h3>出身地　富山県</h3>
+            <p>
+                WEBに関する皆様の困りごとを解決します。こんなことを頼んでいいのかな？ということからお尋ねください。
+            </p>
+        </div>
+    </section>
+
+    <section id="news" class="news-section">
+        <div class="section-head">
+            <h2 class="section-head__title">NEWS</h2>
+
+        </div>
+
+        <div class="section-inner">
+            <ul class="news-list">
+                <li class="news-list__item">
+                    <a href="#" class="news-list__link">
+                        <span class="news-list__date">2025.07.04</span>
+                        ポートフォリオサイトアップしました。
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="https://www.youtube.com/@%E3%82%88%E3%81%86%E3%81%A1%E3%82%85%E3%81%86%E3%81%A1%E3%82%83%E3%82%93"
+                        tabindex="_blank" rel="noopener noreferrer" class="news-list__link">
+                        <span class="news-list__date">2025.07.04</span>
+                        甥っ子のあーちゃんがYouTubeデビューしました。
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="https://x.com/yasumasa_ono_hp/status/1907334957045002395" tabindex="_blank"
+                        rel="noopener noreferrer" class="news-list__link">
+                        <span class="news-list__date">2025.04.02</span>
+                        SUNABACOの小野先生よりGlideの記事が紹介されました
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-head">
+            <h2>CONTACT</h2>
+        </div>
+        <div class="section-inner">
+            <h2>お問い合わせはこちらまで</h2>
+            <div class="innner-container">
+
+                <a href="https://docs.google.com/forms/d/1pMTeKe1_quy7y7fuAtHwSvu64vT-IZSQ3isEBFQ3WC4/edit?hl=ja"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="icons">
+                        <img src="img/maillogo.png">
+                    </div>
+                </a>
+
+                <a href="https://x.com/httakkun" target="_blank" rel="noopener noreferrer">
+                    <div class="icons">
+                        <img src="img/Xlogo.png">
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/nienie_29/?locale=ja_JP" target="_blank" rel="noopener noreferrer">
+                    <div class="icons">
+                        <img src="img/instalogo.png">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <div class="footer">
+        <nav class="footer">
+            <ul class="footer-list">
+                <li class="footer__item"><a href="#works" class="footer__link">WORKS</a></li>
+                <li class="footer__item"><a href="#profile" class="footer__link">PROFILE</a></li>
+                <li class="footer__item"><a href="#news" class="footer__link">NEWS</a></li>
+                <li class="footer__item"><a href="#contact" class="footer__link">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ページの末尾手前あたりに置いておきます -->
+    <a href="#" class="to-top">
+        <img src="img/headerlogo.gif" alt="トップへ戻る" />
+    </a>
+
+
+
+
+</body>
+
+</html>

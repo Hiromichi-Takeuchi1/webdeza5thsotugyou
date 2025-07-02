@@ -1,0 +1,125 @@
+@use 'variables' as *;
+@use 'common' as *;
+@use 'mixin'  as mixin;
+
+// ヘッダー全体
+.header {
+  width: 100%;
+  height: 120px;
+  padding: 0 40px;
+  background-color: $backgroundColor1;
+  @include mixin.flex-center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__nav {
+    // SPでは非表示
+    @include mixin.mq-sp {
+      display: none;
+    }
+
+    // PCでは右寄せ
+    margin-left: auto;
+
+    .header__list {
+      @include mixin.flex-center;
+      gap: 40px;
+      margin: 0;         // ← ここで左右マージンをリセット
+      padding: 0;
+      list-style: none;
+
+      .header__item {
+        .header__link {
+          text-decoration: none;
+          color: $textColor1;
+          font-weight: bold;
+          font-size: 32px;
+          transition: opacity 0.3s;
+
+          &:hover {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ハンバーガーメニュー
+.ham {
+  @include mixin.flex-center;
+  cursor: pointer;
+
+  // アイコン部分
+  
+  &-icon {
+    // PCでは非表示
+    display: none;
+
+    // SPでは表示＆中央寄せ
+    @include mixin.mq-sp {
+      // display:flex を mixin.flex-center の代わりにここで指定
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ham__border {
+      @include mixin.burger-line(32px, 4px, $textColor1);
+
+      &:nth-child(2) { @include mixin.burger-line(24px, 4px, $textColor1); }
+      &:nth-child(3) { @include mixin.burger-line(16px, 4px, $textColor1); }
+    }
+  }
+
+  // 「MENU」テキスト
+   &__menu {
+    margin-left: 12px;
+    font-size: 16px;
+    color: $textColor1;
+    user-select: none;
+
+    // PCでは非表示
+    display: none;
+
+    // SPでは表示
+    @include mixin.mq-sp {
+      display: block;
+    }
+  }
+  // 開閉時のスタイル
+  &.is-active {
+    .ham-icon {
+      transform: rotate(90deg);
+
+      .ham__border {
+        background-color: $textColor1; // 開いたときに色を変える例
+      }
+    }
+  }
+}
+/* header.scss の最後に追加 */
+.header__nav {
+  &.is-open {
+    display: block;       // SP時に表示
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: $backgroundColor1;
+    width: 200px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    .header__list {
+      flex-direction: column;
+      gap: 16px;
+      margin: 0;
+    }
+  }
+}

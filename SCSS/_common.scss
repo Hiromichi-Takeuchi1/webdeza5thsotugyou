@@ -1,0 +1,58 @@
+// _variables.scssを読み込む
+@use 'variables' as *;
+// @use 'mixin' as *;
+
+body{
+    color: $textColor1;
+    font-family: $sans, serif;
+}
+
+h2{
+    font-size: 32px;
+    // @include mq(sp){
+    //     font-size: 24px;
+    // }
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 16px;
+}
+
+li{
+    list-style: none;
+}
+
+.section-head {
+  margin-top: 60px; // 上から60pxあける
+  text-align: center; // 横位置を中央にする
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
+// .contents-container{
+//     max-width: 1080px;
+//     margin: 0 auto;
+// }
+
+// .pc-none{
+//     display: none;
+//     @include mq(sp){
+//         display: block;
+//     }
+// }
+
+// .sp-none{
+//     display: none;
+//     @include mq(sp){
+//         display: none;
+//     }
+// }$font-stack: $sans, sans-serif;
+$base-font-size: 16px;
+$heading-font-size: 40px;

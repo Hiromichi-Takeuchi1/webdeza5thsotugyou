@@ -1,0 +1,30 @@
+// mixin.scss
+@use 'variables' as *;
+
+// 中央寄せのミックスイン
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ハンバーガーの線（バー）用ミックスイン
+// 引数：
+//  $width — 線の長さ
+//  $height — 線の太さ
+//  $color — 線の色
+//  $duration — アニメーション時間（s）
+@mixin burger-line($width, $height, $color, $duration: 0.3s) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: $height / 2;
+  transition: all $duration ease;
+}
+
+// メディアクエリ用ミックスイン（例：sp 600px 以下）
+@mixin mq-sp {
+  @media (max-width: 600px) {
+    @content;
+  }
+}

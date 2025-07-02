@@ -1,0 +1,72 @@
+@use 'variables' as *;
+@use 'mixin' as mixin;
+
+
+.modal {
+    // デフォルトは非表示（PC 向け）
+    display: none;
+
+    // SP 向け（600px 以下）でモーダルを固定表示可能に
+    @include mixin.mq-sp {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        width: 120px;
+        height: 200px;
+        z-index: 1000;
+
+        // is-active がついたら表示
+        &.is-active {
+            display: block;
+        }
+
+        /* 画面全体を覆うオーバーレイ */
+        // .modal-overlay {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: rgba(0, 0, 0, 0.4); // ← ここをコメント解除！
+        // }
+
+        .modal-container {
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 12px;
+        }
+
+        .close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .nav {
+            margin-top: 32px;
+
+            .nav-menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                &__item {
+                    margin-bottom: 12px;
+                }
+
+                &__link {
+                    text-decoration: none;
+                    color: $textColor1;
+                    font-size: 16px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
