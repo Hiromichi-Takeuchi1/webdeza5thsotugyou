@@ -110,18 +110,14 @@
 
 
 .profile-section {
-  background-color: $backgroundColor2; // Figmaの色に近い背景
+  background-color: $backgroundColor2;
   height: 50vh;
-  // padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
   text-align: center;
 
   .section-head {
-    // margin-bottom: 24px;
-
     h2 {
       font-size: 32px;
       font-weight: bold;
@@ -130,12 +126,13 @@
   }
 
   .section-inner {
-    width: 527px; // Figmaで指定されている幅に合わせる
-    text-align: left; // ← ★ここがポイント
+    width: 527px;
+    
+    text-align: left;
     color: $textColor1;
 
     h3 {
-      line-height: 26px; // 行間10px
+      line-height: 26px;
       margin-bottom: 15px;
     }
 
@@ -143,10 +140,16 @@
       line-height: 1.8;
       margin: 0;
     }
+
+    // ★ スマホ表示（SP）のときだけ幅を100%にしてパディングを追加
+    @include mixin.mq-sp {
+      width: 100%;
+      padding: 0 16px; // 画面端との余白
+    }
   }
 }
 
-// 
+ 
 
 // .profile-section {
 //   background-color: #cbe3e5;
