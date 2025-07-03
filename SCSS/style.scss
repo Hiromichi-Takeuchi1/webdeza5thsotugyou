@@ -301,6 +301,12 @@ $textColor1: #03104c;
           display: block;
           width: 80px; // アイコンサイズ
           height: 80px;
+          object-fit: contain; // アイコンの比率を保つ
+          @include mixin.mq-sp {
+            width: 56px; // スマホでは少し小さく
+            height: 56px;
+          }
+
         }
 
         &:hover {
