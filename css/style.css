@@ -347,6 +347,12 @@ li {
   line-height: 1.8;
   margin: 0;
 }
+@media (max-width: 600px) {
+  .profile-section .section-inner {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
 
 .news-section {
   background-color: #f2f2f2;
