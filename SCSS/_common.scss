@@ -1,6 +1,6 @@
 // _variables.scssを読み込む
 @use 'variables' as *;
-// @use 'mixin' as *;
+@use 'mixin' as mixin;
 
 body{
     color: $textColor1;
@@ -16,10 +16,16 @@ h2{
 
 h3{
     font-size: 24px;
+    @include mixin.mq-sp{
+        font-size: 20px;
+    }
 }
 
 p{
     font-size: 16px;
+    @include mixin.mq-sp{
+        font-size: 14px;
+    }
 }
 
 li{
