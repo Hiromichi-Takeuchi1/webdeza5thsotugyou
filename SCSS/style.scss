@@ -147,7 +147,7 @@
     // ★ スマホ表示（SP）のときだけ幅を100%にしてパディングを追加
     @include mixin.mq-sp {
       width: 100%;
-      padding: 0 16px; // 画面端との余白
+      padding: 0 24px; // 画面端との余白
     }
   }
 }
@@ -206,6 +206,10 @@ $textColor1: #03104c;
     max-width: 527px; // Figma の幅に合わせる
     text-align: left; // リストは左揃え
     color: $textColor1;
+    @include mixin.mq-sp {
+      width: 100%; // スマホでは幅を100%に
+      padding: 0 24px; // 画面端との余白
+    }
 
 
     .news-list {
