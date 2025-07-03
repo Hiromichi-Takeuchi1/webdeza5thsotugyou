@@ -467,7 +467,7 @@ li {
   }
 }
 .contact-section .section-inner .innner-container .icons:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
 }
 .contact-section .section-inner .innner-container .icons:active {
