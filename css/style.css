@@ -436,43 +436,46 @@ li {
   font-size: 1.25rem;
   color: #0b1d5f;
 }
-.contact-section .section-inner .innner-container {
+.contact-section .section-inner .inner-container {
   display: flex;
   gap: 3rem;
   justify-content: center;
   align-items: center;
 }
-.contact-section .section-inner .innner-container .icons {
+.contact-section .section-inner .inner-container .icons {
   background-color: #fff;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
+  transform-origin: center center;
+  will-change: transform, opacity;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
-.contact-section .section-inner .innner-container .icons img {
+.contact-section .section-inner .inner-container .icons img {
   display: block;
   width: 80px;
   height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
+  transform-origin: center center;
+  will-change: transform, opacity;
 }
 @media (max-width: 600px) {
-  .contact-section .section-inner .innner-container .icons img {
+  .contact-section .section-inner .inner-container .icons img {
     width: 56px;
     height: 56px;
   }
 }
-.contact-section .section-inner .innner-container .icons:hover {
+.contact-section .section-inner .inner-container .icons img:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-  transform: translateY(-4px);
+  /* transform は GSAP 側で制御するのでここでは触らない */
 }
-.contact-section .section-inner .innner-container .icons:active {
+.contact-section .section-inner .inner-container .icons img:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
 }
 
 .to-top {
