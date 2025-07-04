@@ -4,10 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PORTFOLIO</title>
+    <title>MY PORTFOLIO | Hiromichi Takeuchi</title>
+
+    <!-- 基本のSEOメタ -->
+    <meta name="description" content="WEBに関するお困りごとを解決します。コーディング・相談・デザインのご依頼はこちらから。">
+    <meta name="keywords" content="ポートフォリオ, Web制作, HTML, CSS, JavaScript, デザイン, フロントエンド">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/">
+
+    <!-- Open Graph (Facebook, LINE など) -->
+    <meta property="og:url" content="https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MY PORTFOLIO | Hiromichi Takeuchi">
+    <meta property="og:description" content="WEBに関するお困りごとを解決します。コーディング・相談・デザインのご依頼はこちらから。">
+    <meta property="og:site_name" content="Hiromichi Takeuchi Portfolio">
+    <meta property="og:image" content="https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@httakkun">
+    <meta name="twitter:title" content="MY PORTFOLIO | Hiromichi Takeuchi">
+    <meta name="twitter:description" content="WEBに関するお困りごとを解決します。コーディング・相談・デザインのご依頼はこちらから。">
+    <meta name="twitter:image" content="https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/img/og-image.png">
+
+    <!-- 構造化データ JSON-LD (WebSite + Breadcrumb) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/#website",
+        "url": "https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/",
+        "name": "MY PORTFOLIO | Hiromichi Takeuchi",
+        "description": "WEBに関するお困りごとを解決します。コーディング・相談・デザインのご依頼はこちらから。",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://hiromichi-takeuchi1.github.io/webdeza5thsotugyou/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
     <!-- Reset CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,17 +71,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
-
-    <!-- Reset CSS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-p6O6...YOUR-INTEGRITY-HERE...Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- main,to-top.js を読み込む -->
     <script src="JS/main.js"></script>
@@ -40,18 +91,18 @@
     <!-- モーダル -->
     <div class="modal">
         <!-- <div class="modal-overlay"> -->
-            <div class="modal-container">
-                <i class="fa-solid fa-xmark close"></i>
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li class="nav-menu__item"><a href="#works" class="nav-menu__link">WORKS</a></li>
-                        <li class="nav-menu__item"><a href="#profile" class="nav-menu__link">PROFILE</a></li>
-                        <li class="nav-menu__item"><a href="#news" class="nav-menu__link">NEWS</a></li>
-                        <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">CONTACT</a></li>
-                    </ul>
+        <div class="modal-container">
+            <i class="fa-solid fa-xmark close"></i>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-menu__item"><a href="#works" class="nav-menu__link">WORKS</a></li>
+                    <li class="nav-menu__item"><a href="#profile" class="nav-menu__link">PROFILE</a></li>
+                    <li class="nav-menu__item"><a href="#news" class="nav-menu__link">NEWS</a></li>
+                    <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">CONTACT</a></li>
+                </ul>
 
-                </nav>
-            </div>
+            </nav>
+        </div>
         <!-- </div> -->
     </div>
 
@@ -171,7 +222,7 @@
                 </li>
                 <li class="news-list__item">
                     <a href="https://www.youtube.com/@%E3%82%88%E3%81%86%E3%81%A1%E3%82%85%E3%81%86%E3%81%A1%E3%82%83%E3%82%93"
-                       target="_blank" rel="noopener noreferrer" class="news-list__link">
+                        target="_blank" rel="noopener noreferrer" class="news-list__link">
                         <span class="news-list__date">2025.07.04</span>
                         甥っ子のあーちゃんがYouTubeデビューしました。
                     </a>
@@ -235,14 +286,15 @@
         <img src="img/headerlogo.gif" alt="トップへ戻る" />
     </a>
 
-  
-  <!-- GSAP 本体 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <!-- ScrollTrigger プラグイン -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- 自分のスクリプト -->
-  <script src="JS/main.js"></script>
+
+    <!-- GSAP 本体 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger プラグイン -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- 自分のスクリプト -->
+    <script src="JS/main.js"></script>
 </body>
+
 </html>
 
 
