@@ -4,7 +4,7 @@
 @use 'footer' as *;
 @use 'mixin' as *;
 @use 'modal' as *;
-@use 'mixin'  as mixin;
+@use 'mixin' as mixin;
 
 
 .hero {
@@ -127,14 +127,15 @@
 
   .section-inner {
     width: 527px;
-    
+
     text-align: left;
     color: $textColor1;
 
     h3 {
       line-height: 26px;
       margin-bottom: 15px;
-      @include mixin.mq-sp{
+
+      @include mixin.mq-sp {
         list-height: 1.4;
       }
     }
@@ -206,6 +207,7 @@ $textColor1: #03104c;
     max-width: 527px; // Figma の幅に合わせる
     text-align: left; // リストは左揃え
     color: $textColor1;
+
     @include mixin.mq-sp {
       width: 100%; // スマホでは幅を100%に
       padding: 0 24px; // 画面端との余白
@@ -259,38 +261,37 @@ $textColor1: #03104c;
   display: flex;
   flex-direction: column;
 
-
-  // 「お問い合わせはこちらまで」とアイコン群
   .section-inner {
     flex: 1; // section-head の下を残り全高さに
     display: flex;
     flex-direction: column;
-    justify-content: space-between; // 上はテキスト、下はアイコン群
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 2rem; // 下部余白
 
-    // サブ見出し
     >h2 {
       margin: 0;
       font-size: 1.25rem;
       color: #0b1d5f;
     }
 
-    .innner-container {
+    .inner-container {
+      // ← typo 修正
       display: flex;
       gap: 3rem; // アイコン間の空き
       justify-content: center;
       align-items: center;
 
       .icons {
-        background-color: #fff; // 白背景の四角
-        padding: 1rem; // 内側余白
+        background-color: #fff;
+        padding: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0.5rem; // 角丸（お好みで調整）
+        border-radius: 0.5rem;
+        transform-origin: center center;
+        will-change: transform, opacity; // GPUでスムーズに
 
-        // ↓ クリック感＆影の演出 ↓
         cursor: pointer;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition:
@@ -299,29 +300,31 @@ $textColor1: #03104c;
 
         img {
           display: block;
-          width: 80px; // アイコンサイズ
+          width: 80px;
           height: 80px;
-          object-fit: contain; // アイコンの比率を保つ
+          object-fit: contain;
+          transform-origin: center center;
+          will-change: transform, opacity;
+
           @include mixin.mq-sp {
-            width: 56px; // スマホでは少し小さく
+            width: 56px;
             height: 56px;
           }
 
-        }
+          &:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            /* transform は GSAP 側で制御するのでここでは触らない */
+          }
 
-        &:hover {
-          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-          transform: translateY(-4px);
-        }
-
-        &:active {
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          transform: translateY(0);
+          &:active {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
         }
       }
     }
   }
 }
+
 
 .to-top {
   position: fixed;
@@ -349,7 +352,7 @@ $textColor1: #03104c;
     height: auto;
   }
 
-   @include mixin.mq-sp {
+  @include mixin.mq-sp {
     // SPでは半分のサイズに
     width: 72px;
     height: 80px;
@@ -357,6 +360,7 @@ $textColor1: #03104c;
     bottom: 20px;
     right: 20px;
   }
+
   /* ▲ ここまで追加 ▲ */
 
   &.active {
@@ -375,5 +379,3 @@ $textColor1: #03104c;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
 }
-
-// 
